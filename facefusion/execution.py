@@ -198,7 +198,7 @@ def create_value_and_unit(text : str) -> Optional[ValueAndUnit]:
 
 		return\
 		{
-			'value': float(value),
+			'value': float(value) if value.replace('.', '', 1).isdigit() else 0.0,
 			'unit': str(unit)
 		}
 	return None
