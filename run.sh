@@ -18,12 +18,12 @@ except Exception:
     print('')
 ")
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu:$NVIDIA_LIBS:$LD_LIBRARY_PATH
+export GRADIO_SERVER_NAME="0.0.0.0"
+export GRADIO_SERVER_PORT=7861
 
 cd /workspace/facefusion
 /workspace/ff_venv/bin/python facefusion.py run \
   --config-path /workspace/facefusion/facefusion.ini \
-  --server-name 0.0.0.0 \
-  --server-port 7861 \
   --execution-providers cuda \
   --execution-thread-count 4 \
   --video-memory-strategy tolerant \
