@@ -1,0 +1,7 @@
+.assets/
+ff_venv/
+__pycache__/
+*.pyc
+*.mp4
+*.jpg
+*.png
